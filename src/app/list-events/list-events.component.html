@@ -1,0 +1,11 @@
+<h1>All Events</h1>
+  <button  class="custom-button" [routerLink]="['/ajout',events]">Creat event</button>
+
+<ul>
+    <div *ngFor="let event of events">
+        <a [routerLink]="['/event', event._id]" class="event-name-link">{{ event.eventName }}</a>
+        <button (click)="deleteEvent(event._id)" class="custom-button">Delete</button>
+        <button [routerLink]="['/event', event._id]" class="custom-button">Update</button>
+        <app-event-card [event]="event"></app-event-card>
+    </div>
+</ul>

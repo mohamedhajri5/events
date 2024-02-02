@@ -1,0 +1,60 @@
+.custom-button {
+	background-color: #4CAF50; /* Green background color */
+	border: none; /* Remove border */
+	color: white; /* White text color */
+	padding: 10px 20px; /* Padding for better appearance */
+	text-align: center; /* Center text horizontally */
+	text-decoration: none; /* Remove underline */
+	display: inline-block; /* Make the button a block element */
+	font-size: 16px; /* Font size */
+	cursor: pointer; /* Add cursor pointer on hover */
+	border-radius: 5px; /* Add rounded corners */
+	transition: background-color 0.3s ease; /* Smooth transition on hover */
+	margin-right: 10px;
+	margin-bottom: 10px;
+  }
+  
+  .custom-button:hover {
+	background-color: #45a049; /* Darker green color on hover */
+  }
+  .event-name-link {
+	text-decoration: none;
+	color: #3498db; /* Set your desired link color */
+	font-weight: bold;
+	font-size: 1.2rem; /* Set your desired font size */
+	transition: color 0.3s ease-in-out;
+	display: inline-block;
+	padding: 0.5rem;
+	border-radius: 5px;
+  }
+  
+  .event-name-link:hover {
+	color: #2980b9; /* Set your desired link color on hover */
+	background-color: #ecf0f1; /* Set your desired background color on hover */
+  }
+  /* Add some styling to the search input */
+.input-container {
+	position: relative;
+	margin-bottom: 20px;
+  }
+  
+  .search-input {
+	padding: 10px;
+	width: 50%;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	outline: none;
+	
+  }
+  
+  .search-icon {
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	transform: translateY(-50%);
+	color: #666;
+	cursor: pointer;
+  }
+  
+  

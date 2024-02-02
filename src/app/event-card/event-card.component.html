@@ -1,0 +1,14 @@
+<div class="event-card">
+	<img *ngIf="event.cover" [src]="event.cover" alt="Event Cover" class="event-cover">
+	<div class="event-details">
+	  <h2>{{ event.eventName }}</h2>
+	  <p *ngIf="event.startDate">{{ event.startDate | date:'shortDate' }}</p>
+	  <p *ngIf="event.startTime">{{ event.startTime }}</p>
+	  <p *ngIf="event.type === 'physical' && event.universityLocation">{{ event.universityLocation }}</p>
+	  <p *ngIf="event.type === 'physical' && event.state">{{ event.state }}</p>
+	  <p *ngIf="event.type === 'physical' && event.placeName">{{ event.placeName }}</p>
+	  <p *ngIf="event.type === 'virtual' && event.virtualApp">{{ event.virtualApp }}</p>
+	  <p *ngIf="event.type === 'virtual' && event.virtualLink">{{ event.virtualLink }}</p>
+	  <p *ngIf="event.description">{{ event.description }}</p>
+	</div>
+  </div>

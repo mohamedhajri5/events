@@ -1,0 +1,115 @@
+form {
+  font-family: sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  padding: 20px 0;
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  gap: 15px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.card .top {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.card .top p {
+  color: gray;
+  font-size: 14px;
+}
+
+.card .top .user-info {
+  display: flex;
+  gap: 6px;
+}
+
+.card .top .user-info .user {
+  width: 28px;
+}
+
+.card .top .user-info h1 {
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.card .top .background {
+  height: 129px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card .middle {
+  display: flex;
+  flex-direction: column;
+}
+
+.card .middle .combo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.card .middle .combo h2 {
+  color: rgb(5, 5, 91);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.card .middle .combo p {
+  color: gray;
+  font-size: 14px;
+}
+
+.card .middle .combo .dates {
+  display: flex;
+  gap: 5px;
+}
+
+.card .middle .combo .dates input[type="date"] {
+  padding: 16px;
+  width: 261px;
+  border-radius: 8px;
+}
+
+.card .middle .combo .dates input[type="time"] {
+  padding: 17px;
+  width: -webkit-fill-available;
+  border-radius: 8px;
+}
+
+.card .middle input[type="text"] {
+  padding: 15px;
+  width: 93%;
+  outline: none;
+  border-radius: 8px;
+}
+
+.card .middle select {
+  padding: 15px;
+  outline: none;
+  border-radius: 8px;
+}
+
+.card button {
+  width: fit-content;
+  margin: 0 auto;
+  padding: 15px 30px;
+  border-radius: 10px;
+  font-size: 19px;
+  background: rgb(5, 5, 91);
+  color: white;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}

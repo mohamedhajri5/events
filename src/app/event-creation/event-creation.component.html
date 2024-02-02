@@ -1,0 +1,115 @@
+<form role="form" [formGroup]="eventForm" (ngSubmit)="onSubmit()">
+  <div class="container">
+    <div class="card">
+      <div class="top">
+        <div class="user-info">
+          <img src="user.png" alt="" class="user" />
+          <h1>Club name</h1>
+        </div>
+        <p>Add cover picture +</p>
+        <input type="file" />
+      </div>
+      <div class="middle">
+        <div class="combo">
+          <h2>Required</h2>
+          <p>Be as descriptive as possible</p>
+        </div>
+        <div class="combo">
+          <h2 id="eventName">Event name</h2>
+          <input type="text" placeholder="Event name" formControlName="eventName"/>
+          <div
+            *ngIf="
+              eventForm.controls['eventName'].invalid &&
+              (eventForm.controls['eventName'].dirty ||
+                eventForm.controls['eventName'].touched)
+            "
+          >
+            <small *ngIf="eventForm.controls['eventName'].hasError('required')"
+              >Event name is required.</small
+            >
+          </div>
+          <div class="dates">
+            <input
+              type="date"
+              id="eventDate"
+              formControlName="startDate"
+              required
+            />
+            <div
+              *ngIf="
+                eventForm.controls['startDate'].invalid &&
+                (eventForm.controls['startDate'].dirty ||
+                  eventForm.controls['startDate'].touched)
+              "
+            >
+              <small *ngIf="eventForm.controls['startDate'].hasError('required')"
+                >Event date is required.</small
+              >
+            </div>
+            <input type="time" formControlName="startTime" required />
+            <div
+              *ngIf="
+                eventForm.controls['startTime'].invalid &&
+                (eventForm.controls['startTime'].dirty ||
+                  eventForm.controls['startTime'].touched)
+              "
+            >
+              <small *ngIf="eventForm.controls['startTime'].hasError('required')"
+                >Event time is required.</small
+              >
+            </div>
+          </div>
+        </div>
+        <div class="combo">
+          <h2>Category</h2>
+          <input
+            type="text"
+            placeholder="Artistic"
+            id="eventCategory"
+            formControlName="category"
+            required
+          />
+          <div
+            *ngIf="
+              eventForm.controls['category'].invalid &&
+              (eventForm.controls['category'].dirty ||
+                eventForm.controls['category'].touched)
+            "
+          >
+            <small *ngIf="eventForm.controls['category'].hasError('required')"
+              >Event category is required.</small
+            >
+          </div>
+        </div>
+        <div class="combo">
+          <h2>Event description</h2>
+          <input type="text" placeholder="Event description" />
+        </div>
+        <div class="combo">
+          <h2>Is it physically or virtual</h2>
+          <select name="" id="eventType" formControlName="type" required>
+            <option value="physical">Physically</option>
+            <option value="virtual">Virtual</option>
+          </select>
+          <div
+            *ngIf="
+              eventForm.controls['type'].invalid &&
+              (eventForm.controls['type'].dirty ||
+                eventForm.controls['type'].touched)
+            "
+          >
+            <small *ngIf="eventForm.controls['type'].hasError('required')"
+              >Event type is required.</small
+            >
+          </div>
+        </div>
+        <button
+          type="submit"
+          [disabled]="!eventForm.valid"
+        >
+          Create event
+        </button>
+      </div>
+    </div>
+  </div>
+</form>

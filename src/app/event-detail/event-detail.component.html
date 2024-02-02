@@ -1,0 +1,74 @@
+<div *ngIf="event" class="container">
+  <div class="card">
+    <h2 style="color: rgb(13, 60, 60); font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">{{ event.eventName }}</h2>
+    <div class="middle">
+      <label>Event Name: </label>
+      <input [(ngModel)]="event.eventName" placeholder="name" />
+    </div>
+
+    <div class="middle">
+      <label>Cover: </label>
+      <input [(ngModel)]="event.cover" placeholder="cover" />
+    </div>
+
+    <div class="middle combo">
+      <label>Event Date: </label>
+      <input [(ngModel)]="event.startDate" placeholder="date" />
+    </div>
+
+    <div class="middle combo">
+      <label>Start Time: </label>
+      <input [(ngModel)]="event.startTime" placeholder="start time" />
+    </div>
+
+    <div class="middle">
+      <label>Description: </label>
+      <textarea [(ngModel)]="event.description" placeholder="description"></textarea>
+    </div>
+
+    <div class="middle">
+      <label>Type: </label>
+      <select [(ngModel)]="event.type">
+        <option value="physical">Physical</option>
+        <option value="virtual">Virtual</option>
+      </select>
+    </div>
+
+    <div class="middle">
+      <label>University Location: </label>
+      <input [(ngModel)]="event.universityLocation" placeholder="university location" />
+    </div>
+
+    <div class="middle">
+      <label>State: </label>
+      <input [(ngModel)]="event.state" placeholder="state" />
+    </div>
+
+    <div class="middle">
+      <label>Place Name: </label>
+      <input [(ngModel)]="event.placeName" placeholder="place name" />
+    </div>
+
+    <div class="middle">
+      <label>Location Link: </label>
+      <input [(ngModel)]="event.locationLink" placeholder="location link" />
+    </div>
+
+    <div class="middle">
+      <label>Location Description: </label>
+      <textarea [(ngModel)]="event.locationDescription" placeholder="location description"></textarea>
+    </div>
+
+    <div class="middle">
+      <label>Virtual App: </label>
+      <input [(ngModel)]="event.virtualApp" placeholder="virtual app" />
+    </div>
+
+    <div class="middle">
+      <label>Virtual Link: </label>
+      <input [(ngModel)]="event.virtualLink" placeholder="virtual link" />
+    </div>
+
+    <button (click)="updateEvent()" routerLink="/events">Update Event</button>
+  </div>
+</div>
